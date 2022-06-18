@@ -47,6 +47,7 @@ const addComments = (state = [], action) => {
         case 'SET_COMMENTS':
         return action.payload;
     }
+    return state;
 }
 
 
@@ -54,7 +55,9 @@ const storeFeedback = createStore(
     combineReducers({
         feedbackList,
         addFeeling,
-        addUnderstanding
+        addSupported,
+        addUnderstanding,
+        addComments
     }),
     applyMiddleware(logger)
 );

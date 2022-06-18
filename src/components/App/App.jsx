@@ -10,6 +10,7 @@ import FeelingForm from '../FeelingFrom/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
+import ReviewForm from '../ReviewForm/ReviewForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -57,6 +58,10 @@ const getFeedback = () => {
 
         <Route exact path='/comments'>
           <CommentsForm />
+        </Route>
+
+        <Route exact path='/review'>
+          <ReviewForm />
         </Route>
 
       </div>

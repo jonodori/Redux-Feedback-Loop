@@ -17,7 +17,7 @@ const CommentsForm = () => {
         dispatch({
             type: 'SET_COMMENTS',
             payload: {
-                comments
+                comments,
             }
         })
 
@@ -33,8 +33,7 @@ const CommentsForm = () => {
                 <label>
                     <h4>Comments</h4>
 
-                    <input type="text" id="comments" onChange={evt => {setComments(evt.target.value)}}
-                        />
+                    <input type="text" id="comments" onChange={evt => {setComments(evt.target.value)}} />
                 </label>
             </div>
             <div>
