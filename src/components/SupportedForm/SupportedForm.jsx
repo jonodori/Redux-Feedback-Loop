@@ -29,7 +29,7 @@ const SupportedForm = () => {
 
     return (
         <>
-        <h2>How well are you understanding the content?</h2>
+        <h2>How well are you being supported?</h2>
         <form onSubmit={onAddSupported}>
             <div>
                 <label>
