@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import FeelingForm from '../FeelingFrom/FeelingForm';
-
+import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +42,11 @@ const getFeedback = () => {
         <Route exact path='/'>
           <FeelingForm />
         </Route>
+
+        <Route exact path='/understanding'>
+          <UnderstandingForm />
+        </Route>
+
       </div>
     </Router>
   );

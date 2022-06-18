@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
 
-const FeelingForm = () => {
+const UnderstandingForm = () => {
     //let's you go to the next page 
     const history = useHistory();
 
@@ -11,39 +11,35 @@ const FeelingForm = () => {
     const dispatch = useDispatch();
 
     //state is empty value 
-    const [feeling, setFeeling] = useState(1);
+    const [understanding, setUnderstanding] = useState(1);
 
-    const onAddFeeling = (evt) => {
+    const onUnderstanding = (evt) => {
         
-
         evt.preventDefault()
         dispatch({
-            type: 'ADD_FEELING',
+            type: 'ADD_UNDERSTANDING',
             payload: {
-                feeling,
+                understanding,
             }
-        })  
-
-        history.push('/understanding')
-
+        });
     }
 
 
     return (
         <>
-        <h2>How are you feeling today?</h2>
-        <form onSubmit={onAddFeeling}>
+        <h2>How well are you understanding the content?</h2>
+        <form onSubmit={onUnderstanding}>
             <div>
                 <label>
                     <input
                         type="range"
                         min="1"
                         max="10"
-                        value={feeling}
-                        onChange={evt => setFeeling(Number(evt.target.value))}
+                        value={understanding}
+                        onChange={evt => setUnderstanding(Number(evt.target.value))}
                         />
                 </label>
-                    {feeling}
+                    {understanding}
             </div>
             <div>
                 <button type ="submit">Next</button>
@@ -54,4 +50,6 @@ const FeelingForm = () => {
     )
 }
 
-export default FeelingForm;
+export default UnderstandingForm;
+
+
