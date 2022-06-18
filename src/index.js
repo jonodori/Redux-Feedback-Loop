@@ -26,11 +26,13 @@ const addFeeling = (state = [], action) => {
     return state;
 }
 
-
-
-
-
-
+const addUnderstanding = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_UNDERSTANDING': 
+        return action.payload;
+    }
+    return state;
+}
 
 
 
@@ -39,6 +41,7 @@ const storeFeedback = createStore(
     combineReducers({
         feedbackList,
         addFeeling,
+        addUnderstanding
     }),
     applyMiddleware(logger)
 );
