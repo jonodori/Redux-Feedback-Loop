@@ -18,7 +18,7 @@ const FeelingForm = () => {
 
         evt.preventDefault()
         dispatch({
-            type: 'ADD_FEELING',
+            type: 'SET_FEELING',
             payload: {
                 feeling,
             }

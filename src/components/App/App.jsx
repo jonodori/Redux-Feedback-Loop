@@ -9,6 +9,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import FeelingForm from '../FeelingFrom/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
+import CommentsForm from '../CommentsForm/CommentsForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,10 @@ const getFeedback = () => {
 
         <Route exact path='/supported'>
           <SupportedForm />
+        </Route>
+
+        <Route exact path='/comments'>
+          <CommentsForm />
         </Route>
 
       </div>
