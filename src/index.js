@@ -42,6 +42,13 @@ const addSupported = (state = [], action) => {
     return state;
 }
 
+const addComments = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_COMMENTS':
+        return action.payload;
+    }
+}
+
 
 const storeFeedback = createStore(
     combineReducers({

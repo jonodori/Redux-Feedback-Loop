@@ -16,12 +16,12 @@ const CommentsForm = () => {
         evt.preventDefault()
         dispatch({
             type: 'SET_COMMENTS',
-            payload: comments
+            payload: {
+                comments
+            }
         })
 
-        history.push('/')
-        
-
+        history.push('/review')
     }
     
 
