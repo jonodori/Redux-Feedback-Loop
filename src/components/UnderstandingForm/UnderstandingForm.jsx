@@ -13,7 +13,7 @@ const UnderstandingForm = () => {
     //state is empty value 
     const [understanding, setUnderstanding] = useState(1);
 
-    const onUnderstanding = (evt) => {
+    const onAddUnderstanding = (evt) => {
         
         evt.preventDefault()
         dispatch({
@@ -21,14 +21,16 @@ const UnderstandingForm = () => {
             payload: {
                 understanding,
             }
-        });
+        })
+
+        history.push('/supported')
     }
 
 
     return (
         <>
         <h2>How well are you understanding the content?</h2>
-        <form onSubmit={onUnderstanding}>
+        <form onSubmit={onAddUnderstanding}>
             <div>
                 <label>
                     <input
