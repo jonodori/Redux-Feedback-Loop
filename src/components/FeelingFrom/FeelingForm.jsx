@@ -8,29 +8,40 @@ const FeelingForm = () => {
     const dispatch = useDispatch();
 
     //state is empty value 
-    const [feeling, setFeeling] = useState('');
+    const [feeling, setFeeling] = useState(0);
 
     const handleSubmit = (evt) => {
-        const 
-    }
+        
 
         evt.preventDefault()
         dispatch({
-            type: 
-        })
-
+            type: 'ADD_FEELING',
+            payload: {
+                feeling,
+            }
+        });
+    }
 
 
     return (
         <>
+        <h2>How are you feeling today?</h2>
         <form onSubmit={handleSubmit}>
             <div>
-                <input type ="text" name="" id="feelings" 
-                onChange={evt => {setFeeling(evt.target.value)}} />
+                <label>
+                    <input
+                        type="range"
+                        min="0"
+                        max="10"
+                        value={feeling}
+                        onChange={evt => setFeeling(Number(evt.target.value))}
+                        />
+                </label>
             </div>
             <div>
                 <button type ="submit">Next</button>
             </div>
+                
         </form>
         </>
     )

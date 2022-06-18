@@ -38,6 +38,7 @@ const addFeeling = (state = [], action) => {
 const storeFeedback = createStore(
     combineReducers({
         feedbackList,
+        addFeeling,
     }),
     applyMiddleware(logger)
 );
