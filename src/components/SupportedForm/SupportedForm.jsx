@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
 
-const UnderstandingForm = () => {
+const SupportedForm = () => {
     //let's you go to the next page 
     const history = useHistory();
 
