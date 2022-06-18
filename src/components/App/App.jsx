@@ -4,8 +4,11 @@ import './App.css';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+
+//components
 import FeelingForm from '../FeelingFrom/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
+import SupportedForm from '../SupportedForm/SupportedForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +48,10 @@ const getFeedback = () => {
 
         <Route exact path='/understanding'>
           <UnderstandingForm />
+        </Route>
+
+        <Route exact path='/supported'>
+          <SupportedForm />
         </Route>
 
       </div>
