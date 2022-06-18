@@ -20,7 +20,7 @@ const feedbackList = (state = [], action) => {
 
 const addFeeling = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_FEELING': 
+        case 'SET_FEELING': 
         return action.payload;
     }
     return state;
@@ -28,13 +28,26 @@ const addFeeling = (state = [], action) => {
 
 const addUnderstanding = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_UNDERSTANDING': 
+        case 'SET_UNDERSTANDING': 
         return action.payload;
     }
     return state;
 }
 
+const addSupported = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_SUPPORTED': 
+        return action.payload;
+    }
+    return state;
+}
 
+const addComments = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_COMMENTS':
+        return action.payload;
+    }
+}
 
 
 const storeFeedback = createStore(

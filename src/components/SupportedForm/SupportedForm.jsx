@@ -17,7 +17,7 @@ const SupportedForm = () => {
         
         evt.preventDefault()
         dispatch({
-            type: 'ADD_SUPPORTED',
+            type: 'SET_SUPPORTED',
             payload: {
                 supported,
             }

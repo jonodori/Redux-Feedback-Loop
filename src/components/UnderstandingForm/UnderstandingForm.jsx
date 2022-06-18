@@ -17,7 +17,7 @@ const UnderstandingForm = () => {
         
         evt.preventDefault()
         dispatch({
-            type: 'ADD_UNDERSTANDING',
+            type: 'SET_UNDERSTANDING',
             payload: {
                 understanding,
             }
