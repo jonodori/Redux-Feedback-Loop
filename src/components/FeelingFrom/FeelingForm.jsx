@@ -4,13 +4,16 @@ import { useHistory } from 'react-router-dom';
 
 
 const FeelingForm = () => {
+    //let's you go to the next page 
+    const history = useHistory();
+
     // in order to use dispatch    
     const dispatch = useDispatch();
 
     //state is empty value 
     const [feeling, setFeeling] = useState(0);
 
-    const handleSubmit = (evt) => {
+    const onAddFeeling = (evt) => {
         
 
         evt.preventDefault()
@@ -26,7 +29,7 @@ const FeelingForm = () => {
     return (
         <>
         <h2>How are you feeling today?</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onAddFeeling}>
             <div>
                 <label>
                     <input
@@ -37,6 +40,7 @@ const FeelingForm = () => {
                         onChange={evt => setFeeling(Number(evt.target.value))}
                         />
                 </label>
+                    {feeling}
             </div>
             <div>
                 <button type ="submit">Next</button>
@@ -46,3 +50,5 @@ const FeelingForm = () => {
         </>
     )
 }
+
+export default FeelingForm;
