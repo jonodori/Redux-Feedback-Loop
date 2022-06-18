@@ -4,5 +4,50 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//Redux
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger';
+
+
+const feedbackList = (state = [], action) => {
+    switch (action.type) {
+        case 'GET_FEEDBACK_LIST':
+            return action.payload
+    }
+    return state;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const storeFeedback = createStore(
+    combineReducers({
+        feedbackList,
+    }),
+    applyMiddleware(logger)
+);
+
+
+ReactDOM.render(
+    <Provider store={storeFeedback}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
 registerServiceWorker();
