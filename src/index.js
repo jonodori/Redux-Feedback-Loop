@@ -10,14 +10,6 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 
-const feedbackList = (state = [], action) => {
-    switch (action.type) {
-        case 'GET_FEEDBACK_LIST':
-            return action.payload;
-        }   
-
-    return state;
-}
 
 const addFeeling = (state = 1, action) => {
     switch (action.type) {
@@ -63,7 +55,6 @@ const addComments = (state = '', action) => {
 
 const storeFeedback = createStore(
     combineReducers({
-        feedbackList,
         addFeeling,
         addSupported,
         addUnderstanding,

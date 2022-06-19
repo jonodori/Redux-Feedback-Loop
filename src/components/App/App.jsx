@@ -12,6 +12,7 @@ import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import ReviewForm from '../ReviewForm/ReviewForm';
 import SuccessForm from '../SuccessForm/SuccessForm';
+import AdminFeedback from '../AdminFeedback/AdminFeedback';
 
 function App() {
   const dispatch = useDispatch();
@@ -69,6 +70,9 @@ const getFeedback = () => {
           <SuccessForm />
         </Route>
 
+        <Route exact path='/adminFeedback'>
+          <AdminFeedback />
+        </Route>
         
 
       </div>
