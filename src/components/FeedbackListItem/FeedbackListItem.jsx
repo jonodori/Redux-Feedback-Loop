@@ -8,7 +8,7 @@ const FeedbackListItem = ({feedback, fetchFeedback}) => {
         axios.delete(`/api/feedback/${feedback.id}`
         ).then(() => {
             console.log('delete success!', feedback.id);
-            // refreshs the page 
+            // refreshes the page, so you don't have to click the refresh button
             fetchFeedback();
         }).catch((error) => {
             console.log('error in delete', error)
