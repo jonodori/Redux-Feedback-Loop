@@ -11,7 +11,7 @@ const ReviewForm = () => {
     const feeling = useSelector(store => store.addFeeling)
     const understanding = useSelector(store => store.addUnderstanding);
     const support = useSelector(store => store.addSupported);
-    const comments = useSelector(store => store.addUnderstanding);
+    const comments = useSelector(store => store.addComments);
 
     //post to the Database
     const submitFeedback = () => {
