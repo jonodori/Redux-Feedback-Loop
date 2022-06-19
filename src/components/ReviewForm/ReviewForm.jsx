@@ -30,8 +30,11 @@ const ReviewForm = () => {
         })
     }
 
+    
+
     const handleSubmit = () => {
         submitFeedback();
+        history.push('/success')
     }
 
     return(
