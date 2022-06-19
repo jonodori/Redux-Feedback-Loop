@@ -35,6 +35,7 @@ const FeedbackList = () => {
             <th>Understanding</th>
             <th>Support</th>
             <th>Comments</th>
+            <th>Date</th>
             </tr>
         </thead>
         <tbody>

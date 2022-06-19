@@ -24,6 +24,7 @@ const FeedbackListItem = ({feedback, fetchFeedback}) => {
             <td> {feedback.understanding} </td>
             <td> {feedback.support} </td>
             <td> {feedback.comments} </td>
+            <td> {feedback.date} </td>
             <td> <button onClick={handleDelete}>Delete</button> </td>
         </tr>
     )
