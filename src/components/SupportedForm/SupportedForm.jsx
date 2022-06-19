@@ -18,9 +18,9 @@ const SupportedForm = () => {
         evt.preventDefault()
         dispatch({
             type: 'SET_SUPPORTED',
-            payload: {
+            payload: 
                 supported,
-            }
+            
         })
 
         history.push('/comments')

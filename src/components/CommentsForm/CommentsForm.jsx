@@ -16,9 +16,9 @@ const CommentsForm = () => {
         evt.preventDefault()
         dispatch({
             type: 'SET_COMMENTS',
-            payload: {
+            payload: 
                 comments,
-            }
+            
         })
 
         history.push('/review')

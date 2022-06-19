@@ -19,9 +19,9 @@ const FeelingForm = () => {
         evt.preventDefault()
         dispatch({
             type: 'SET_FEELING',
-            payload: {
+            payload: 
                 feeling,
-            }
+            
         })  
 
         history.push('/understanding')

@@ -18,7 +18,7 @@ const feedbackList = (state = [], action) => {
     return state;
 }
 
-const addFeeling = (state = [], action) => {
+const addFeeling = (state = 1, action) => {
     switch (action.type) {
         case 'SET_FEELING': 
         return action.payload;
@@ -26,7 +26,7 @@ const addFeeling = (state = [], action) => {
     return state;
 }
 
-const addUnderstanding = (state = [], action) => {
+const addUnderstanding = (state = 1, action) => {
     switch (action.type) {
         case 'SET_UNDERSTANDING': 
         return action.payload;
@@ -34,7 +34,7 @@ const addUnderstanding = (state = [], action) => {
     return state;
 }
 
-const addSupported = (state = [], action) => {
+const addSupported = (state = 1, action) => {
     switch (action.type) {
         case 'SET_SUPPORTED': 
         return action.payload;
@@ -42,7 +42,7 @@ const addSupported = (state = [], action) => {
     return state;
 }
 
-const addComments = (state = [], action) => {
+const addComments = (state = '', action) => {
     switch (action.type) {
         case 'SET_COMMENTS':
         return action.payload;
