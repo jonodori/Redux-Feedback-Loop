@@ -18,9 +18,9 @@ const UnderstandingForm = () => {
         evt.preventDefault()
         dispatch({
             type: 'SET_UNDERSTANDING',
-            payload: {
+            payload: 
                 understanding,
-            }
+            
         })
 
         history.push('/supported')
