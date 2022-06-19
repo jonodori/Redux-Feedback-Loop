@@ -1,8 +1,10 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 import axios from "axios";
+import FeedbackListItem from "../FeedbackListItem/FeedbackListItem";
 
-const AdminFeedback = () => {
+
+const FeedbackList = () => {
 
     useEffect(() => {
         fetchFeedback();
@@ -37,9 +39,8 @@ const AdminFeedback = () => {
         </thead>
         <tbody>
             {currentFeedback.map(feedback => (
-                <tr>
-                    
-                </tr>
+                //calls the component and sends the feedback data and calls the function fetchFeedback
+                <FeedbackListItem key={feedback.id} feedback={feedback} fetchFeedback={fetchFeedback} />
             ))}
         </tbody>  
 </table>
@@ -47,4 +48,4 @@ const AdminFeedback = () => {
 
 }
 
-export default AdminFeedback;
+export default FeedbackList;
