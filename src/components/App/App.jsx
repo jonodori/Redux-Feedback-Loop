@@ -11,6 +11,7 @@ import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import ReviewForm from '../ReviewForm/ReviewForm';
+import SuccessForm from '../SuccessForm/SuccessForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -62,6 +63,10 @@ const getFeedback = () => {
 
         <Route exact path='/review'>
           <ReviewForm />
+        </Route>
+
+        <Route exact path='/success'>
+          <SuccessForm />
         </Route>
 
         
