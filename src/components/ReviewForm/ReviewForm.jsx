@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 const ReviewForm = () => {
-    const history = useHistory;
+    const history = useHistory();
 
     // useSelectors to display
     const feeling = useSelector(store => store.addFeeling)
@@ -34,7 +34,7 @@ const ReviewForm = () => {
 
     const handleSubmit = () => {
         submitFeedback();
-        history.push('/success')
+        history.push('/success');
     }
 
     return(
